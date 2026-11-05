@@ -221,6 +221,11 @@ input:focus, select:focus, textarea:focus { border-color: var(--ink); outline: n
 .footer { background: var(--ink); color: #D6D9E0; padding: 40px 0 34px; }
 .footer .logo { color: #fff; margin-bottom: 12px; }
 .footer p { margin: 0 0 4px; }
+.legal { display: grid; grid-template-columns: 1fr 1.7fr; gap: 18px 44px; margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-size: .86rem; color: #AEB4C0; scroll-margin-top: 80px; }
+.legal h2 { font: 800 .95rem/1.3 var(--font-title); color: #fff; letter-spacing: 0; margin: 0 0 8px; }
+.footer .legal p { margin: 0 0 8px; }
+.legal a { color: #fff; }
+.consent a { color: var(--red); }
 
 /* Bouton collant (mobile) */
 .sticky-cta { display: none; }
@@ -264,4 +269,5 @@ input:focus, select:focus, textarea:focus { border-color: var(--ink); outline: n
   .swatch { width: 34px; height: 34px; }
   .nav-right .btn-sm { display: none; }
   .price-main strong { font-size: 1.7rem; }
+  .legal { grid-template-columns: 1fr; }
 }
