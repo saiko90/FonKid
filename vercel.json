@@ -3,6 +3,14 @@
   "buildCommand": "sh build.sh",
   "outputDirectory": "public",
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "fonkid.vercel.app" }],
+      "destination": "https://fonkid.ch/:path",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
