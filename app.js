@@ -18,6 +18,23 @@
     perso: 'conic-gradient(#E5483B, #F4B731, #2F8A68, #4AA3DF, #A88BDD, #E5483B)'
   };
 
+  // Pays déduit du fuseau horaire de l'appareil (plus fiable que la langue du navigateur :
+  // beaucoup de Suisses romands ont un navigateur réglé en « français (France) »).
+  var TZ_COUNTRY = { 'Europe/Zurich': 'CH', 'Europe/Paris': 'FR', 'Europe/Berlin': 'DE', 'Europe/Busingen': 'DE', 'Europe/Vienna': 'AT',
+    'Europe/Brussels': 'BE', 'Europe/Luxembourg': 'LU', 'Europe/Rome': 'IT' };
+  var KNOWN = ['CH', 'FR', 'DE', 'AT', 'BE', 'LU', 'IT'];
+
+  // Numéros d'urgence affichés dans la FAQ selon le pays choisi
+  var EMERGENCY = {
+    CH: [['112', 'all'], ['117', 'police'], ['118', 'fire'], ['144', 'medical']],
+    FR: [['112', 'all'], ['15', 'medical'], ['17', 'police'], ['18', 'fire']],
+    DE: [['112', 'all'], ['110', 'police']],
+    AT: [['112', 'all'], ['122', 'fire'], ['133', 'police'], ['144', 'medical']],
+    BE: [['112', 'all'], ['101', 'police']],
+    LU: [['112', 'all'], ['113', 'police']],
+    IT: [['112', 'all'], ['113', 'police'], ['115', 'fire'], ['118', 'medical']]
+  };
+
   function $(sel, root) { return (root || document).querySelector(sel); }
   function $all(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
   function t(key) { var d = I18N[state.lang]; return (d && d[key] !== undefined) ? d[key] : (I18N.fr[key] || ''); }
@@ -54,12 +71,11 @@
   function trackView() {
     if (LOCAL || sread('fk-seen')) return;
     swrite('fk-seen', '1');
-    var region = ((navigator.language || '').split('-')[1] || '').toUpperCase();
     insert('fonkid_visits', {
       lang: state.lang,
       source: sread('fk-src') || null,
       referrer: sread('fk-ref') || null,
-      country: /^[A-Z]{2}$/.test(region) ? region : null,
+      country: guessCountry(),
       mobile: window.matchMedia ? window.matchMedia('(max-width: 640px)').matches : null
     }).catch(function () { /* statistiques facultatives */ });
   }
@@ -158,18 +174,34 @@
         var o = document.createElement('option'); o.value = c[0]; o.textContent = c[0] + ' – ' + c[1]; cs.appendChild(o);
       });
     }
-    toggleRegion();
+    onCountry();
   }
 
   function guessCountry() {
-    var r = ((navigator.language || '').split('-')[1] || '').toUpperCase();
-    return ['CH', 'FR', 'DE', 'AT', 'BE', 'LU', 'IT'].indexOf(r) > -1 ? r : 'CH';
+    var langs = navigator.languages || [navigator.language || ''];
+    var regions = langs.map(function (l) { return ((l || '').split('-')[1] || '').toUpperCase(); });
+    if (regions.indexOf('CH') > -1) return 'CH';            // langue « …-CH » : visiteur suisse
+    var tz = '';
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { /* ancien navigateur */ }
+    if (TZ_COUNTRY[tz]) return TZ_COUNTRY[tz];               // sinon le fuseau horaire de l'appareil
+    if (KNOWN.indexOf(regions[0]) > -1) return regions[0];
+    return tz ? 'XX' : 'CH';
   }
 
-  function toggleRegion() {
+  function onCountry() {
     var ch = $('#country').value === 'CH';
     $('#canton-field').classList.toggle('hidden', !ch);
     $('#region-field').classList.toggle('hidden', ch);
+    updateEmergency();
+  }
+
+  function updateEmergency() {
+    var el = $('[data-i18n="faq.4.a"]'); if (!el) return;
+    var c = $('#country').value || 'CH', list = EMERGENCY[c];
+    var nums = (list || [['112', 'all']]).map(function (n) { return n[0] + ' (' + t('emerg.' + n[1]) + ')'; }).join(', ');
+    if (!list) nums += ' ' + t('emerg.other');
+    var name = list ? (dict().countries.filter(function (x) { return x[0] === c; })[0] || [c, c])[1] : t('emerg.elsewhere');
+    el.textContent = t('faq.4.a').replace('{c}', name).replace('{n}', nums);
   }
 
   function setBusy(btn, busy, labelKey) {
@@ -335,7 +367,7 @@
     $all('.lang button').forEach(function (b) {
       b.addEventListener('click', function () { var l = b.getAttribute('data-lang'); store('fk-lang', l); applyLang(l); });
     });
-    $('#country').addEventListener('change', toggleRegion);
+    $('#country').addEventListener('change', onCountry);
     $('#reserve-form').addEventListener('submit', onReserve);
     $('#survey-form').addEventListener('submit', onSurvey);
     $('#survey-skip').addEventListener('click', showThanks);
