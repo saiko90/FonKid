@@ -110,7 +110,7 @@ window.FK_I18N = {
     'form.phones.3': '3 ou plus',
     'form.style': 'Coque préférée',
     'form.style.change': 'changer',
-    'form.consent': 'J’accepte d’être contacté·e au sujet du lancement de FonKid. Pas de spam, désinscription à tout moment.',
+    'form.consent': 'J’accepte d’être contacté·e au sujet du lancement de FonKid. Pas de spam, désinscription à tout moment (<a href="#legal">protection des données</a>).',
     'form.submit': 'Je réserve gratuitement',
     'form.sending': 'Envoi…',
     'form.err.email': 'Merci d’entrer un email valide.',
@@ -162,10 +162,19 @@ window.FK_I18N = {
     'faq.7.q': 'Le Correspondant IA, c’est sûr ?',
     'faq.7.a': 'Il est conçu pour les enfants : il ne parle que de sujets adaptés à leur âge, sans publicité, et les parents fixent le temps par jour. Vous recevez un petit bilan des progrès.',
     'faq.8.q': 'Que faites-vous de mes données ?',
-    'faq.8.a': 'Elles servent uniquement à vous informer du lancement et à concevoir FonKid. Elles ne sont ni vendues ni partagées. Vous pouvez demander leur suppression à tout moment en répondant à l’un de nos emails.',
+    'faq.8.a': 'Elles servent uniquement à vous informer du lancement et à concevoir FonKid. Elles ne sont ni vendues ni partagées. Pour les consulter ou les faire supprimer : contact@swissdigitalstudio.ch.',
 
     'footer.made': 'Un projet né en Valais, Suisse',
     'footer.note': 'Prix et caractéristiques indicatifs, susceptibles d’évoluer.',
+
+    'legal.imprint.t': 'Mentions légales',
+    'legal.imprint': 'FonKid est un projet de <a href="https://www.swissdigitalstudio.ch" rel="noopener">Swiss Digital Studio</a><br>Responsable : Krystel Fiorbianco<br>Route de Derborence 28, 1976 Aven (VS), Suisse<br>Tél. <a href="tel:+41787116411">078 711 64 11</a> · <a href="mailto:contact@swissdigitalstudio.ch">contact@swissdigitalstudio.ch</a>',
+    'legal.privacy.t': 'Protection des données',
+    'legal.privacy.1': 'Données collectées : votre email, votre prénom (facultatif), votre pays ou canton, le nombre de FonKid, la coque choisie, vos réponses facultatives au questionnaire et la provenance de votre visite (par ex. un lien partagé).',
+    'legal.privacy.2': 'Utilisation : uniquement pour vous informer du lancement de FonKid et pour notre étude de marché. Vos données ne sont ni vendues ni cédées à des tiers.',
+    'legal.privacy.3': 'Hébergement : le site est hébergé par Vercel Inc. (États-Unis) et les données sont enregistrées chez Supabase (serveurs en Irlande, UE). Ces prestataires traitent aussi les données techniques de connexion (comme l’adresse IP) nécessaires au fonctionnement du site.',
+    'legal.privacy.4': 'Statistiques : nous comptons les visites sans cookie ; notre compteur n’enregistre pas votre adresse IP.',
+    'legal.privacy.5': 'Vos droits : vous pouvez consulter, corriger ou faire supprimer vos données à tout moment en écrivant à <a href="mailto:contact@swissdigitalstudio.ch">contact@swissdigitalstudio.ch</a>. Elles sont conservées pendant la durée du projet, puis supprimées.',
 
     styles: {
       rouge: 'Rouge Valais', glacier: 'Bleu Glacier', sapin: 'Vert Sapin', soleil: 'Jaune Soleil', lilas: 'Lilas', nuit: 'Nuit',
@@ -291,7 +300,7 @@ window.FK_I18N = {
     'form.phones.3': '3 oder mehr',
     'form.style': 'Lieblingshülle',
     'form.style.change': 'ändern',
-    'form.consent': 'Ich bin einverstanden, zum Marktstart von FonKid kontaktiert zu werden. Kein Spam, jederzeit abmeldbar.',
+    'form.consent': 'Ich bin einverstanden, zum Marktstart von FonKid kontaktiert zu werden. Kein Spam, jederzeit abmeldbar (<a href="#legal">Datenschutz</a>).',
     'form.submit': 'Kostenlos reservieren',
     'form.sending': 'Wird gesendet…',
     'form.err.email': 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
@@ -343,10 +352,19 @@ window.FK_I18N = {
     'faq.7.q': 'Ist der KI-Sprachfreund sicher?',
     'faq.7.a': 'Er ist für Kinder gemacht: nur altersgerechte Themen, keine Werbung, und die Eltern bestimmen die Zeit pro Tag. Sie erhalten eine kurze Übersicht über die Fortschritte.',
     'faq.8.q': 'Was passiert mit meinen Daten?',
-    'faq.8.a': 'Sie dienen nur dazu, Sie über den Start zu informieren und FonKid zu entwickeln. Sie werden weder verkauft noch weitergegeben. Löschung jederzeit auf Anfrage – antworten Sie einfach auf eine unserer E-Mails.',
+    'faq.8.a': 'Sie dienen nur dazu, Sie über den Start zu informieren und FonKid zu entwickeln. Sie werden weder verkauft noch weitergegeben. Auskunft oder Löschung jederzeit: contact@swissdigitalstudio.ch.',
 
     'footer.made': 'Ein Projekt aus dem Wallis, Schweiz',
     'footer.note': 'Preise und Eigenschaften unverbindlich, Änderungen vorbehalten.',
+
+    'legal.imprint.t': 'Impressum',
+    'legal.imprint': 'FonKid ist ein Projekt von <a href="https://www.swissdigitalstudio.ch" rel="noopener">Swiss Digital Studio</a><br>Verantwortlich: Krystel Fiorbianco<br>Route de Derborence 28, 1976 Aven (VS), Schweiz<br>Tel. <a href="tel:+41787116411">078 711 64 11</a> · <a href="mailto:contact@swissdigitalstudio.ch">contact@swissdigitalstudio.ch</a>',
+    'legal.privacy.t': 'Datenschutz',
+    'legal.privacy.1': 'Erhobene Daten: Ihre E-Mail-Adresse, Ihr Vorname (optional), Land oder Kanton, die Anzahl FonKid, die gewählte Hülle, Ihre freiwilligen Antworten im Fragebogen und die Herkunft Ihres Besuchs (z. B. ein geteilter Link).',
+    'legal.privacy.2': 'Zweck: ausschliesslich, um Sie über den Marktstart von FonKid zu informieren, und für unsere Marktstudie. Ihre Daten werden weder verkauft noch an Dritte weitergegeben.',
+    'legal.privacy.3': 'Hosting: Die Website wird von Vercel Inc. (USA) gehostet, die Daten werden bei Supabase gespeichert (Server in Irland, EU). Diese Anbieter verarbeiten auch die für den Betrieb nötigen technischen Verbindungsdaten (z. B. die IP-Adresse).',
+    'legal.privacy.4': 'Statistik: Wir zählen Besuche ohne Cookies; unser Zähler speichert keine IP-Adressen.',
+    'legal.privacy.5': 'Ihre Rechte: Auskunft, Berichtigung oder Löschung jederzeit per E-Mail an <a href="mailto:contact@swissdigitalstudio.ch">contact@swissdigitalstudio.ch</a>. Die Daten werden für die Dauer des Projekts aufbewahrt und danach gelöscht.',
 
     styles: {
       rouge: 'Walliser Rot', glacier: 'Gletscherblau', sapin: 'Tannengrün', soleil: 'Sonnengelb', lilas: 'Flieder', nuit: 'Nacht',
@@ -472,7 +490,7 @@ window.FK_I18N = {
     'form.phones.3': '3 or more',
     'form.style': 'Favourite shell',
     'form.style.change': 'change',
-    'form.consent': 'I agree to be contacted about the FonKid launch. No spam, unsubscribe anytime.',
+    'form.consent': 'I agree to be contacted about the FonKid launch. No spam, unsubscribe anytime (<a href="#legal">privacy</a>).',
     'form.submit': 'Reserve for free',
     'form.sending': 'Sending…',
     'form.err.email': 'Please enter a valid email.',
@@ -524,10 +542,19 @@ window.FK_I18N = {
     'faq.7.q': 'Is the AI Pen Pal safe?',
     'faq.7.a': 'It’s designed for kids: age-appropriate topics only, no ads, and parents set the daily time. You get a short progress summary.',
     'faq.8.q': 'What do you do with my data?',
-    'faq.8.a': 'It’s only used to tell you about the launch and to design FonKid. It’s never sold or shared. You can ask us to delete it anytime by replying to one of our emails.',
+    'faq.8.a': 'It’s only used to tell you about the launch and to design FonKid. It’s never sold or shared. To see or delete it anytime: contact@swissdigitalstudio.ch.',
 
     'footer.made': 'A project from Valais, Switzerland',
     'footer.note': 'Prices and features are indicative and may change.',
+
+    'legal.imprint.t': 'Legal notice',
+    'legal.imprint': 'FonKid is a project by <a href="https://www.swissdigitalstudio.ch" rel="noopener">Swiss Digital Studio</a><br>Responsible: Krystel Fiorbianco<br>Route de Derborence 28, 1976 Aven (VS), Switzerland<br>Phone <a href="tel:+41787116411">+41 78 711 64 11</a> · <a href="mailto:contact@swissdigitalstudio.ch">contact@swissdigitalstudio.ch</a>',
+    'legal.privacy.t': 'Privacy',
+    'legal.privacy.1': 'What we collect: your email, first name (optional), country or canton, number of FonKids, chosen shell, your optional survey answers and where your visit came from (e.g. a shared link).',
+    'legal.privacy.2': 'Why: only to tell you about the FonKid launch and for our market research. Your data is never sold or passed on to third parties.',
+    'legal.privacy.3': 'Hosting: the site is hosted by Vercel Inc. (USA) and data is stored with Supabase (servers in Ireland, EU). These providers also process the technical connection data (such as IP addresses) needed to run the site.',
+    'legal.privacy.4': 'Analytics: we count visits without cookies; our counter does not store IP addresses.',
+    'legal.privacy.5': 'Your rights: you can access, correct or delete your data anytime by emailing <a href="mailto:contact@swissdigitalstudio.ch">contact@swissdigitalstudio.ch</a>. Data is kept for the duration of the project, then deleted.',
 
     styles: {
       rouge: 'Valais Red', glacier: 'Glacier Blue', sapin: 'Fir Green', soleil: 'Sunny Yellow', lilas: 'Lilac', nuit: 'Midnight',
