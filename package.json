@@ -1,0 +1,12 @@
+{
+  "name": "fonkid",
+  "private": true,
+  "description": "Page de présentation et de réservation FonKid (site statique)",
+  "scripts": {
+    "build": "sh build.sh"
+  },
+  "devDependencies": {
+    "@expo-google-fonts/nunito": "0.4.2",
+    "@resvg/resvg-js": "2.6.2"
+  }
+}

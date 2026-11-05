@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FonKid — le premier téléphone de vos enfants, sans écran</title>
+  <meta name="description" content="FonKid : un téléphone fixe sans écran pour que les enfants de 4 à 12 ans appellent leurs copains et leurs grands-parents. Contacts validés par les parents, coques à changer. Réservation gratuite.">
+  <meta name="theme-color" content="#FBF6EE">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FonKid">
+  <meta property="og:title" content="FonKid — le premier téléphone de vos enfants, sans écran">
+  <meta property="og:description" content="Ils appellent leurs copains et leurs grands-parents. Vous choisissez qui, et quand. Réservation gratuite et sans engagement.">
+  <link rel="canonical" href="__SITE__/">
+  <meta property="og:url" content="__SITE__/">
+  <meta property="og:image" content="__SITE__/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#reserver">Réserver</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav-in">
+      <a class="logo" href="#top" aria-label="FonKid"><span class="logo-dot" aria-hidden="true"></span>FonKid</a>
+      <nav class="nav-links" aria-label="Menu">
+        <a href="#comment" data-i18n="nav.how">Fonctionnement</a>
+        <a href="#plus" data-i18n="nav.plus">Le plus FonKid</a>
+        <a href="#prix" data-i18n="nav.price">Prix</a>
+        <a href="#faq" data-i18n="nav.faq">Questions</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang" role="group" aria-label="Langue / Sprache / Language">
+          <button type="button" data-lang="fr">FR</button>
+          <button type="button" data-lang="de">DE</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn-sm" href="#reserver" data-i18n="nav.reserve">Réserver</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <span class="badge" data-i18n="hero.badge">Nouveau · Conçu en Valais</span>
+          <h1 data-i18n-html="hero.title">Le premier téléphone de vos enfants. <em>Sans écran.</em></h1>
+          <p class="lead" data-i18n="hero.sub">Ils appellent leurs copains et leurs grands-parents tout seuls. Vous choisissez qui, et quand.</p>
+        </div>
+
+        <div class="phone-stage" id="hero-phone"></div>
+
+        <div class="picker" id="habiller">
+          <div class="picker-head">
+            <strong data-i18n="picker.title">Habille ton FonKid</strong>
+            <span class="muted small" data-i18n="picker.hint">Les coques se changent en 10 secondes.</span>
+          </div>
+          <div class="swatches" id="swatches" role="radiogroup" aria-label="Coques"></div>
+          <p class="picker-caption" id="picker-caption" aria-live="polite"></p>
+        </div>
+
+        <div class="hero-actions">
+          <div class="cta-row">
+            <a class="btn" href="#reserver" data-i18n="hero.cta">Réserver gratuitement</a>
+            <a class="btn btn-ghost" href="#comment" data-i18n="hero.cta2">Comment ça marche</a>
+          </div>
+          <p class="small muted" data-i18n="hero.note">Gratuit et sans engagement · Prix de lancement pour les inscrits</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLÈME -->
+    <section class="band">
+      <div class="wrap narrow center">
+        <h2 data-i18n="problem.title">Trop jeune pour un smartphone. Assez grand pour appeler ses copains.</h2>
+        <p class="lead" data-i18n="problem.text"></p>
+      </div>
+    </section>
+
+    <!-- COMMENT ÇA MARCHE -->
+    <section id="comment" class="section">
+      <div class="wrap">
+        <h2 class="center" data-i18n="how.title">Comment ça marche</h2>
+        <div class="steps">
+          <article class="step">
+            <span class="step-n">1</span>
+            <h3 data-i18n="how.1.t">Il décroche</h3>
+            <p data-i18n="how.1.d"></p>
+          </article>
+          <article class="step">
+            <span class="step-n">2</span>
+            <h3 data-i18n="how.2.t">Vous choisissez</h3>
+            <p data-i18n="how.2.d"></p>
+          </article>
+          <article class="step">
+            <span class="step-n">3</span>
+            <h3 data-i18n="how.3.t">La famille appelle directement</h3>
+            <p data-i18n="how.3.d"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FONCTIONNALITÉS -->
+    <section class="section alt">
+      <div class="wrap">
+        <h2 class="center" data-i18n="feat.title">Tout ce qu’il faut, rien de trop</h2>
+        <div class="features">
+          <article class="feature"><span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M4 4l16 16"/></svg></span>
+            <h3 data-i18n="feat.no_screen.t"></h3><p data-i18n="feat.no_screen.d"></p></article>
+          <article class="feature"><span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <h3 data-i18n="feat.approved.t"></h3><p data-i18n="feat.approved.d"></p></article>
+          <article class="feature"><span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+            <h3 data-i18n="feat.hours.t"></h3><p data-i18n="feat.hours.d"></p></article>
+          <article class="feature"><span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="7" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></svg></span>
+            <h3 data-i18n="feat.photo.t"></h3><p data-i18n="feat.photo.d"></p></article>
+          <article class="feature"><span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 3h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg></span>
+            <h3 data-i18n="feat.free.t"></h3><p data-i18n="feat.free.d"></p></article>
+          <article class="feature"><span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <h3 data-i18n="feat.private.t"></h3><p data-i18n="feat.private.d"></p></article>
+          <article class="feature"><span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="6.5" cy="13" r="3.5"/><circle cx="17.5" cy="13" r="3.5"/><path d="M6.5 16.5h11"/></svg></span>
+            <h3 data-i18n="feat.voicemail.t"></h3><p data-i18n="feat.voicemail.d"></p></article>
+          <article class="feature"><span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 20c2-6 4-1 6-6s4 0 6-5 3-4 4-5"/></svg></span>
+            <h3 data-i18n="feat.corded.t"></h3><p data-i18n="feat.corded.d"></p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LE PLUS FONKID -->
+    <section id="plus" class="section">
+      <div class="wrap">
+        <p class="kicker center" data-i18n="plus.kicker">Le plus FonKid</p>
+        <h2 class="center" data-i18n="plus.title">Ce que les autres n’ont pas</h2>
+        <div class="plus-grid">
+          <article class="plus-card plus-shells">
+            <div class="mini-lineup" id="mini-lineup" aria-hidden="true"></div>
+            <h3 data-i18n="plus.shells.t">Des coques à changer</h3>
+            <p data-i18n="plus.shells.d"></p>
+            <span class="tag" data-i18n="plus.shells.tag"></span>
+          </article>
+          <article class="plus-card plus-stories">
+            <div class="plus-ico" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#F4B731"/><path d="M18 22q7-3 14 0v22q-7-3-14 0z M32 22q7-3 14 0v22q-7-3-14 0z" fill="#fff"/></svg>
+            </div>
+            <h3 data-i18n="plus.stories.t">Allô Histoires</h3>
+            <p data-i18n="plus.stories.d"></p>
+            <span class="tag tag-green" data-i18n="plus.stories.tag">Inclus</span>
+          </article>
+          <article class="plus-card plus-penpal">
+            <div class="plus-ico" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#4AA3DF"/><text x="32" y="39" text-anchor="middle" font-family="ui-rounded, Nunito, system-ui, sans-serif" font-size="20" font-weight="800" fill="#fff">Aa</text></svg>
+            </div>
+            <h3 data-i18n="plus.penpal.t">Le Correspondant</h3>
+            <p data-i18n="plus.penpal.d"></p>
+            <span class="tag tag-blue" data-i18n="plus.penpal.tag"></span>
+            <p class="small muted" data-i18n="plus.penpal.small"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VINTAGE -->
+    <section class="vintage">
+      <div class="wrap vintage-in">
+        <div class="vintage-phone" id="vintage-phone" aria-hidden="true"></div>
+        <div>
+          <p class="kicker" data-i18n="vintage.kicker">Série limitée</p>
+          <h2 data-i18n="vintage.title">L’édition Vintage</h2>
+          <p class="lead" data-i18n="vintage.text"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARATIF -->
+    <section class="section">
+      <div class="wrap narrow">
+        <h2 class="center" data-i18n="cmp.title">Pourquoi pas un smartphone ou une montre ?</h2>
+        <div class="cmp" role="table">
+          <div class="cmp-row cmp-head" role="row">
+            <span role="columnheader"></span>
+            <span role="columnheader" data-i18n="cmp.smartphone">Smartphone</span>
+            <span role="columnheader" data-i18n="cmp.watch">Montre connectée</span>
+            <span role="columnheader" class="cmp-us">FonKid</span>
+          </div>
+          <div class="cmp-row" role="row"><span role="rowheader" data-i18n="cmp.r1"></span><span class="bad" data-i18n="cmp.r1.a"></span><span class="mid" data-i18n="cmp.r1.b"></span><span class="good cmp-us" data-i18n="cmp.r1.c"></span></div>
+          <div class="cmp-row" role="row"><span role="rowheader" data-i18n="cmp.r2"></span><span class="bad" data-i18n="cmp.r2.a"></span><span class="good" data-i18n="cmp.r2.b"></span><span class="good cmp-us" data-i18n="cmp.r2.c"></span></div>
+          <div class="cmp-row" role="row"><span role="rowheader" data-i18n="cmp.r3"></span><span class="bad" data-i18n="cmp.r3.a"></span><span class="mid" data-i18n="cmp.r3.b"></span><span class="good cmp-us" data-i18n="cmp.r3.c"></span></div>
+          <div class="cmp-row" role="row"><span role="rowheader" data-i18n="cmp.r4"></span><span class="bad" data-i18n="cmp.r4.a"></span><span class="mid" data-i18n="cmp.r4.b"></span><span class="good cmp-us" data-i18n="cmp.r4.c"></span></div>
+          <div class="cmp-row" role="row"><span role="rowheader" data-i18n="cmp.r5"></span><span class="bad" data-i18n="cmp.r5.a"></span><span class="mid" data-i18n="cmp.r5.b"></span><span class="good cmp-us" data-i18n="cmp.r5.c"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIX -->
+    <section id="prix" class="section alt">
+      <div class="wrap narrow">
+        <h2 class="center" data-i18n="price.title">Prix prévus</h2>
+        <div class="prices">
+          <div class="price-main">
+            <span data-i18n="price.fonkid">FonKid</span>
+            <strong>CHF 129.–</strong>
+          </div>
+          <ul class="price-list">
+            <li><span data-i18n="price.pack"></span><strong>CHF 239.–</strong></li>
+            <li><span data-i18n="price.shell"></span><strong data-i18n="price.shell.v"></strong></li>
+            <li><span data-i18n="price.perso"></span><strong>CHF 39.–</strong></li>
+            <li><span data-i18n="price.free"></span><strong class="ok" data-i18n="price.free.v"></strong></li>
+            <li><span data-i18n="price.stories"></span><strong class="ok" data-i18n="price.stories.v"></strong></li>
+            <li><span data-i18n="price.calls"></span><strong data-i18n="price.month"></strong></li>
+            <li><span data-i18n="price.penpal"></span><strong data-i18n="price.month"></strong></li>
+          </ul>
+          <p class="small muted center" data-i18n="price.note"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RÉSERVATION -->
+    <section id="reserver" class="section reserve">
+      <div class="wrap narrow">
+        <div class="card form-card">
+          <!-- Étape 1 : réservation -->
+          <form id="reserve-form" novalidate>
+            <p class="kicker" data-i18n="form.kicker">Réservation gratuite</p>
+            <h2 data-i18n="form.title">Réservez votre FonKid</h2>
+            <p class="muted" data-i18n="form.sub"></p>
+
+            <div class="grid2">
+              <label class="field">
+                <span data-i18n="form.email">Email</span>
+                <input type="email" name="email" autocomplete="email" required inputmode="email">
+              </label>
+              <label class="field">
+                <span data-i18n="form.first_name">Prénom (facultatif)</span>
+                <input type="text" name="first_name" autocomplete="given-name" maxlength="80">
+              </label>
+              <label class="field">
+                <span data-i18n="form.country">Pays</span>
+                <select name="country" id="country"></select>
+              </label>
+              <label class="field" id="canton-field">
+                <span data-i18n="form.canton">Canton</span>
+                <select name="canton" id="canton"><option value="">—</option></select>
+              </label>
+              <label class="field hidden" id="region-field">
+                <span data-i18n="form.region">Région ou ville (facultatif)</span>
+                <input type="text" name="region" maxlength="80">
+              </label>
+            </div>
+
+            <fieldset class="field">
+              <legend data-i18n="form.phones">Combien de FonKid ?</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="phones" value="1" checked><span data-i18n="form.phones.1">1</span></label>
+                <label class="chip"><input type="radio" name="phones" value="2"><span data-i18n="form.phones.2"></span></label>
+                <label class="chip"><input type="radio" name="phones" value="3"><span data-i18n="form.phones.3"></span></label>
+              </div>
+            </fieldset>
+
+            <div class="field style-field">
+              <span data-i18n="form.style">Coque préférée</span>
+              <div class="style-pick">
+                <span class="style-dot" id="style-dot"></span>
+                <strong id="style-name"></strong>
+                <a href="#habiller" class="link" data-i18n="form.style.change">changer</a>
+              </div>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" name="consent" required>
+              <span data-i18n="form.consent"></span>
+            </label>
+
+            <!-- Piège à robots : laisser vide -->
+            <div class="hp" aria-hidden="true">
+              <label>Company <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+            </div>
+
+            <p class="form-error" id="form-error" role="alert"></p>
+            <button class="btn btn-block" type="submit" id="reserve-btn" data-i18n="form.submit">Je réserve gratuitement</button>
+          </form>
+
+          <!-- Étape 2 : questionnaire -->
+          <form id="survey-form" class="hidden" novalidate>
+            <div class="success-head">
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <h2 data-i18n="survey.title">Merci, c’est réservé !</h2>
+                <p class="muted" data-i18n="survey.sub"></p>
+              </div>
+            </div>
+
+            <fieldset class="field"><legend><span data-i18n="survey.ages"></span> <em class="muted small" data-i18n="survey.multi"></em></legend>
+              <div class="chips" id="q-ages"></div></fieldset>
+            <fieldset class="field"><legend data-i18n="survey.device"></legend>
+              <div class="chips" id="q-device"></div></fieldset>
+            <fieldset class="field"><legend data-i18n="survey.plan"></legend>
+              <div class="chips" id="q-plan"></div></fieldset>
+            <fieldset class="field"><legend data-i18n="survey.price"></legend>
+              <div class="chips" id="q-price"></div></fieldset>
+
+            <fieldset class="field"><legend data-i18n="survey.options"></legend>
+              <div class="yn-list">
+                <div class="yn"><span data-i18n="survey.opt_calls"></span><div class="chips chips-sm" data-yn="opt_calls"></div></div>
+                <div class="yn"><span data-i18n="survey.opt_custom_shell"></span><div class="chips chips-sm" data-yn="opt_custom_shell"></div></div>
+                <div class="yn"><span data-i18n="survey.opt_pen_pal"></span><div class="chips chips-sm" data-yn="opt_pen_pal"></div></div>
+              </div>
+            </fieldset>
+            <fieldset class="field hidden" id="langs-field"><legend data-i18n="survey.langs"></legend>
+              <div class="chips" id="q-langs"></div></fieldset>
+
+            <fieldset class="field"><legend><span data-i18n="survey.top"></span> <em class="muted small" data-i18n="survey.top3"></em></legend>
+              <div class="chips" id="q-top"></div></fieldset>
+            <fieldset class="field"><legend data-i18n="survey.when"></legend>
+              <div class="chips" id="q-when"></div></fieldset>
+            <label class="field">
+              <span data-i18n="survey.msg"></span>
+              <textarea name="message" rows="3" maxlength="2000" data-i18n-ph="survey.msg.ph"></textarea>
+            </label>
+
+            <p class="form-error" id="survey-error" role="alert"></p>
+            <div class="row-btns">
+              <button class="btn" type="submit" id="survey-btn" data-i18n="survey.submit">Envoyer mes réponses</button>
+              <button class="btn btn-ghost" type="button" id="survey-skip" data-i18n="survey.skip">Passer</button>
+            </div>
+          </form>
+
+          <!-- Étape 3 : merci + partage -->
+          <div id="thanks" class="hidden center">
+            <div class="thanks-phone" id="thanks-phone" aria-hidden="true"></div>
+            <h2 data-i18n="thanks.title">Merci !</h2>
+            <p data-i18n="thanks.text"></p>
+            <div class="row-btns center-btns">
+              <a class="btn btn-wa" id="share-wa" target="_blank" rel="noopener" data-i18n="thanks.whatsapp">Partager sur WhatsApp</a>
+              <button class="btn btn-ghost" type="button" id="share-copy" data-i18n="thanks.copy">Copier le lien</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="wrap narrow">
+        <h2 class="center" data-i18n="faq.title">Questions fréquentes</h2>
+        <div class="faq">
+          <details><summary data-i18n="faq.1.q"></summary><p data-i18n="faq.1.a"></p></details>
+          <details><summary data-i18n="faq.2.q"></summary><p data-i18n="faq.2.a"></p></details>
+          <details><summary data-i18n="faq.3.q"></summary><p data-i18n="faq.3.a"></p></details>
+          <details><summary data-i18n="faq.4.q"></summary><p data-i18n="faq.4.a"></p></details>
+          <details><summary data-i18n="faq.5.q"></summary><p data-i18n="faq.5.a"></p></details>
+          <details><summary data-i18n="faq.6.q"></summary><p data-i18n="faq.6.a"></p></details>
+          <details><summary data-i18n="faq.7.q"></summary><p data-i18n="faq.7.a"></p></details>
+          <details><summary data-i18n="faq.8.q"></summary><p data-i18n="faq.8.a"></p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <a class="logo" href="#top"><span class="logo-dot" aria-hidden="true"></span>FonKid</a>
+      <p><span data-i18n="footer.made">Un projet né en Valais, Suisse</span> · © <span id="year">2026</span> FonKid</p>
+      <p class="small muted" data-i18n="footer.note"></p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+    <a class="btn" href="#reserver" tabindex="-1" data-i18n="hero.cta">Réserver gratuitement</a>
+  </div>
+
+  <script src="/i18n.js"></script>
+  <script src="/phone.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+node_modules/
+public/
+.vercel/
+design/out/
+__pycache__/
+.DS_Store
