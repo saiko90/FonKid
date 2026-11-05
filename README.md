@@ -50,9 +50,16 @@ select opt_custom_shell, count(*) from fonkid_survey group by 1;
 
 -- D'où viennent les inscrits
 select coalesce(source, referrer, 'direct') as canal, count(*) from fonkid_reservations group by 1 order by 2 desc;
+
+-- Visites par jour et par canal (une ligne par session, sans cookie ni IP)
+select created_at::date as jour, coalesce(source, referrer, 'direct') as canal, count(*)
+from fonkid_visits group by 1, 2 order by 1 desc, 3 desc;
+
+-- Taux de conversion visites -> réservations
+select round(100.0 * (select count(*) from fonkid_reservations) / nullif((select count(*) from fonkid_visits), 0), 1) as conversion_pct;
 ```
 
-Les visites sont comptées sans cookie dans `page_stats` et `ref_stats` (filtrer sur l'hôte du site).
+Mentions légales et protection des données : bas de page (`#legal`), textes dans `i18n.js` (clés `legal.*`).
 
 ## Sécurité
 

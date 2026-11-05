@@ -50,14 +50,17 @@
     }
   }
 
-  /* ---------- Statistiques de visite (first-party, sans cookie) ---------- */
+  /* ---------- Visites : une ligne par session, sans cookie ni adresse IP ---------- */
   function trackView() {
-    if (LOCAL) return;
-    var region = ((navigator.language || '').split('-')[1] || '').toUpperCase().slice(0, 2);
-    fetch(SB_URL + '/rest/v1/rpc/track_view', {
-      method: 'POST', keepalive: true,
-      headers: { apikey: SB_KEY, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ p_path: location.pathname || '/', p_country: region, p_ref: sread('fk-ref') || '', p_host: location.hostname })
+    if (LOCAL || sread('fk-seen')) return;
+    swrite('fk-seen', '1');
+    var region = ((navigator.language || '').split('-')[1] || '').toUpperCase();
+    insert('fonkid_visits', {
+      lang: state.lang,
+      source: sread('fk-src') || null,
+      referrer: sread('fk-ref') || null,
+      country: /^[A-Z]{2}$/.test(region) ? region : null,
+      mobile: window.matchMedia ? window.matchMedia('(max-width: 640px)').matches : null
     }).catch(function () { /* statistiques facultatives */ });
   }
 
