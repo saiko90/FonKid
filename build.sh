@@ -13,14 +13,8 @@ else
 fi
 
 # URL absolue du site pour les balises de partage (og:image, canonical).
-# Ordre : SITE_URL (à définir à la main si besoin) > domaine de production Vercel > défaut.
-if [ -n "$SITE_URL" ]; then
-  SITE="$SITE_URL"
-elif [ -n "$VERCEL_PROJECT_PRODUCTION_URL" ]; then
-  SITE="https://$VERCEL_PROJECT_PRODUCTION_URL"
-else
-  SITE="https://fonkid.vercel.app"
-fi
+# Domaine officiel fonkid.ch ; SITE_URL permet de le remplacer si besoin.
+SITE="${SITE_URL:-https://fonkid.ch}"
 SITE="${SITE%/}"
 sed -i "s#__SITE__#$SITE#g" public/index.html
 echo "public/ prêt ($SITE)"

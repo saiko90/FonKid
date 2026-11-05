@@ -30,7 +30,7 @@ cd public && python3 -m http.server 8765
 
 - `?lang=fr|de|en` force la langue.
 - `?ref=nom-du-canal` (ou `utm_source`, `utm_campaign`) est enregistré avec la réservation (colonne `source`).
-  Exemple : `https://fonkid.vercel.app/?ref=fb-parents-sion` pour savoir quel post amène des inscrits.
+  Exemple : `https://fonkid.ch/?ref=fb-parents-sion` pour savoir quel post amène des inscrits.
 
 ## Lire les résultats (Supabase → SQL Editor)
 
