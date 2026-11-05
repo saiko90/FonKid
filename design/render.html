@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>FonKid — planches prototypes</title>
+<style>
+  body { margin: 0; font-family: ui-rounded, "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif; background: #FBF6EE; color: #1F2430; }
+  .board { width: 1600px; padding: 48px; box-sizing: border-box; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+  .cell { background: #fff; border-radius: 28px; padding: 18px 18px 10px; box-shadow: 0 10px 30px rgba(31,36,48,.07); text-align: center; }
+  .cell svg { width: 100%; height: auto; display: block; }
+  .cell b { display: block; font-size: 22px; margin: 4px 0 6px; }
+  h1 { font-size: 44px; margin: 0 0 6px; letter-spacing: -.5px; }
+  p.lead { font-size: 22px; margin: 0 0 30px; color: #5B6271; }
+  .hero { width: 1400px; height: 1000px; display: grid; place-items: center; background: radial-gradient(60% 60% at 50% 45%, #FFE9D6 0%, #FBF6EE 70%); }
+  .hero svg { width: 1100px; height: auto; }
+  .lineup { width: 1800px; padding: 40px 50px 30px; box-sizing: border-box; display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; background: #FBF6EE; }
+  .lineup svg { width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <div id="sheet" class="board">
+    <h1>FonKid — les coques</h1>
+    <p class="lead">Même téléphone, coques à changer. Prototypes de style (non contractuels).</p>
+    <div class="grid" id="grid"></div>
+  </div>
+  <div id="hero-wrap"></div>
+  <div id="lineup" class="lineup"></div>
+<script src="../phone.js"></script>
+<script>
+  var NAMES = { rouge: 'Rouge Valais', glacier: 'Bleu Glacier', sapin: 'Vert Sapin', soleil: 'Jaune Soleil', lilas: 'Lilas', nuit: 'Nuit',
+    edelweiss: 'Edelweiss', vache: 'Vache', etoiles: 'Étoiles', vintage: 'Vintage', perso: 'Coque perso (dessin)' };
+  var P = window.FonKidPhone;
+  var grid = document.getElementById('grid');
+  P.ORDER.forEach(function (id) {
+    var d = document.createElement('div'); d.className = 'cell';
+    d.innerHTML = P.svg(id, { uid: 'g' + id }) + '<b>' + NAMES[id] + '</b>';
+    grid.appendChild(d);
+  });
+  var params = new URLSearchParams(location.search);
+  var heroStyle = params.get('hero') || 'rouge';
+  document.getElementById('hero-wrap').innerHTML = '<div class="hero" id="hero">' + P.svg(heroStyle, { uid: 'hero' }) + '</div>';
+  var line = document.getElementById('lineup');
+  ['rouge', 'glacier', 'soleil', 'vache', 'etoiles', 'perso'].forEach(function (id) {
+    var d = document.createElement('div'); d.innerHTML = P.svg(id, { uid: 'l' + id }); line.appendChild(d);
+  });
+</script>
+</body>
+</html>
